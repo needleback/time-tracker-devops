@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: DEPLOYNAME_PLACEHOLDER
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: time-tracker
+  template:
+    metadata:
+      labels:
+        app: time-tracker
+    spec:
+      containers:
+        - name: time-tracker
+          image: IMAGE_PLACEHOLDER
+          ports:
+            - containerPort: 8080
