@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: DEPLOYNAME_PLACEHOLDER
+  name: time-tracker
+  namespace: diplom
 
 spec:
   replicas: 1
@@ -14,6 +15,8 @@ spec:
       labels:
         app: time-tracker
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
         - name: time-tracker
           image: IMAGE_PLACEHOLDER

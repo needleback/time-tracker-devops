@@ -3,6 +3,7 @@ kind: Service
 
 metadata:
   name: time-tracker
+  namespace: diplom
 
 spec:
   type: NodePort
