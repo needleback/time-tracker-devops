@@ -1,6 +1,8 @@
 # Описание
 Реализована демонстрация полного цикла CI/CD на примере готового проекта [Time Tracker](https://github.com/taylor-training/time-tracker)
 
+Java (Maven) application for tracking time on the job
+
 Pipeline сборки и тестирования реализован на Jenkins. В процессе выполнения pipeline происходит:
 - проверка репозитория на изменения
 - получение последней версии проекта
@@ -71,13 +73,16 @@ time-tracker-devops/
 
 # Требования
 Должны быть установлены:
-- `docker`
-- `kind`
-- `helm`
-- `kubectl`
-- `yq`
+- Docker`
+- Kind
+- Helm`
+- Kubectl
+- yq
+Для сборки приложения
+* JDK 17+
+* Maven 3.8+
 
-Установка `yq` добавлена в `infra/deploy_infra.sh`, ту приведены команды установки
+Установка `yq` добавлена в `infra/deploy_infra.sh`, тут приведены команды установки
 ```bash
 sudo wget -O /usr/local/bin/yq \
     https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
@@ -309,23 +314,5 @@ kubectl -n diplom get all
 # Версионирование
 Для учебной работы в качестве версионирования был использован `Jenkins BUILD_NUMBER`, который генерирует новую версию при каждой сборке билда.
 
-# README оригинального приложения
-
-Java (Maven) application for tracking time on the job
-
-## Purpose
-
-Simple Java-app using Maven.
-
-## Building
-
-Standard maven targets for building.
-
-Requirements:
-
-* JDK 17+
-* Maven 3.8+
-
-```bash
-mvn clean install
-```
+# Автор CI/CD
+needleback
