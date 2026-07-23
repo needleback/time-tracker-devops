@@ -1,0 +1,7 @@
+apiVersion: 1
+providers:
+  - name: Time-tracker App Dashboard
+    folder: Time-traker App
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards
